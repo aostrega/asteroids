@@ -1,0 +1,34 @@
+GIT
+  remote: git://github.com/opal/opal.git
+  revision: 78b4fb9f94daaeedf0981780756cd2f3008c0a83
+  ref: 78b4fb9
+  specs:
+    opal (0.7.0.dev)
+      hike (~> 1.2)
+      source_map
+      sprockets (~> 2.12.1)
+      tilt (~> 1.4)
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+    hike (1.2.3)
+    json (1.8.1)
+    multi_json (1.10.1)
+    rack (1.5.2)
+    source_map (3.0.1)
+      json
+    sprockets (2.12.2)
+      hike (~> 1.2)
+      multi_json (~> 1.0)
+      rack (~> 1.0)
+      tilt (~> 1.1, != 1.3.0)
+    tilt (1.4.1)
+    yeah (0.4.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  opal!
+  yeah (~> 0.4.2)
