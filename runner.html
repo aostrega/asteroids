@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Game</title>
+
+  <style>
+    html, body {
+      overflow: hidden;
+      height: 100%;
+      margin: 0;
+    }
+
+    body {
+      background: black;
+    }
+
+    .center-content {
+      display: -ms-flexbox;
+      -ms-flex-pack: center;
+      -ms-flex-align: center;
+      display: -moz-box;
+      -moz-box-pack: center;
+      -moz-box-align: center;
+      display: -webkit-box;
+      -webkit-box-pack: center;
+      -webkit-box-align: center;
+      display: box;
+      box-pack: center;
+      box-align: center;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+
+  <script>
+    function scaleDisplay() {
+      var canvas = document.getElementsByTagName('canvas')[0],
+
+          width_scale = window.innerWidth / canvas.width,
+          height_scale = window.innerHeight / canvas.height,
+
+          scale = Math.min(width_scale, height_scale);
+
+      if (FACTORIAL_SCALING && scale >= 1) {
+        scale = Math.floor(scale);
+      }
+
+      var width = canvas.width * scale,
+          height = canvas.height * scale,
+
+          sizeStyle = "width:"+width+"px; height:"+height+"px";
+
+      canvas.setAttribute('style', sizeStyle);
+    }
+  </script>
+</head>
+<body class="center-content" onresize="scaleDisplay()">
+  <canvas></canvas>
+
+  <div class="hidden">
+    <audio src="./assets/split.wav"></audio>
+<audio src="./assets/explode.wav"></audio>
+<audio src="./assets/shoot.wav"></audio>
+<style>@font-face { font-family: "deja-vu-serif.ttf"; src: url(assets/deja-vu-serif.ttf) }</style>
+  </div>
+
+  <script src="./assets/yeah/web/dependencies.js"></script>
+  <script src="./assets/yeah/web.js"></script>
+  <script src="./assets/yeah/web/setup.js"></script>
+
+  <script src="./assets/config.js"></script>
+  <script src="./assets/game.js"></script>
+
+  <script src="./assets/yeah/web/start.js"></script>
+
+  <script>scaleDisplay()</script>
+</body>
+</html>
